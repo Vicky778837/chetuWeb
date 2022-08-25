@@ -1,0 +1,22 @@
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Edit User </div>
+  <div class="card-body">
+
+    <h5 class="card-title"><%=form_with model: @user do |form|%>
+</h5>
+    <p class="card-text"><%=form.label :Name%></p>
+    <p class="card-text"> <%=form.text_field :name%><br>
+  </p>
+    <p class="card-text"><%=form.label :phone%></p>
+    <p class="card-text"> <%=form.text_field :phone%><br>
+    </p>
+
+
+
+  </div>
+
+
+ <%=form.label :Eamil%>
+ <%=form.text_field :email%><br>
+<%=form.submit%>
+<%end%>

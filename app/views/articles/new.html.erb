@@ -1,0 +1,28 @@
+<div class="container">
+ <form>
+    <%=form_with model: @article do |form|%>
+           <div>
+             <%=form.label :title%>
+             <%=form.text_field :title%><br>
+            </div>
+
+            <div>
+             <%=form.label :description%>
+             <%=form.text_field :description%> <br>
+            </div>
+
+            <div>
+              <%= form.file_field :avatar %><br>
+            </div>
+
+            <div>
+             <%=form.label :UserId%>
+             <%=form.text_field :user_id%> <br>
+             </div>
+
+           <%=form.submit "Submit",class: "btn btn-success"%>
+          </p>
+     </div>
+    <%end%>
+ </form>
+</div>

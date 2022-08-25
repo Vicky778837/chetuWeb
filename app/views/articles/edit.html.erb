@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <%=form_with model: @article do |form|%>
+   <div class="card-body">
+    <h5 class="card-title">Aritcal Edit Form</h5>
+       <p class="card-text">
+         <%=form.label :title%>
+         <%=form.text_field :title%><br>
+         <%=form.label :description%>
+         <%=form.text_field :description%> <br>
+         <%= form.file_field :avatar %><br>
+         <%=form.submit%>
+        </p>
+   </div>
+  <%end%>
+</div>

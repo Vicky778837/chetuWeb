@@ -1,0 +1,19 @@
+<div  align="center">
+<div class="card" style="width: 18rem;">
+  <h5 class="card-header">Informantion  of User</h5>
+  <div class="card-body">
+    <h5 class="card-title">Name: <%= @user.name%><br>
+    </h5>
+    <p class="card-text">Email: <%= @user.email%><br>
+    </p>
+     <p class="card-text">Phone: <%= @user.phone%><br>
+   <br>
+ </p>
+
+  <p class="card-text"><%=link_to"Edit User",edit_user_path(@user)%><br>
+   <br>
+ </p>
+  </div>
+</div>
+
+</div>

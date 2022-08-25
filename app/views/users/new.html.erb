@@ -1,0 +1,22 @@
+<div class="container">
+    <form>
+        <%=form_with model: @user do |form|%>
+        <div class="form-group">
+         <%=form.label :Name%>
+         <%=form.text_field :name, class: "form-control"%><br>
+        </div>
+
+        <div>
+         <%=form.label :Phone%>
+         <%=form.text_field :phone, class: "form-control"%> <br>
+        </div>
+
+        <div>
+         <%=form.label :Eamil%>
+         <%=form.text_field :email, class:"form-control"%><br>
+        </div>
+
+        <%=form.submit%>
+        <%end%>
+    </form>
+</div>

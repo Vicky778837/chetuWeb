@@ -1,0 +1,21 @@
+<h2> Dashboard </h2>
+<div class="container">
+   <%= link_to"AddArticale",new_article_path,class: "btn btn-primary" %>
+   <div class="justify-content-center">
+      <% @article.each do |art|%>
+         <div class="card mb-3 m-auto m-0" style="width: 18rem;">
+            <div class="card-body">
+               <h5 class="card-title"><%=art.title%></h5>
+               <p class="card-text"><%= h truncate(art.description, :length => 80) %></p>
+               <%= link_to"Show",article_path(art.id),class: " btn btn-primary" %>
+            </div>
+         </div>
+      <% end %>
+      <div class="digg_pagination">
+         <div class="page_info">
+            <%= page_entries_info @article %>
+         </div>
+         <%= will_paginate @article, :container => false %>
+      </div>
+   </div>
+</div>
